@@ -19,7 +19,7 @@ export class TxbitService {
   public getMarketSummary(): Observable<MarketSummary> {
     return this.pollingInterval.pipe(
       startWith(0),
-      switchMap(() => this.http.get<MarketSummary>(this.apiBaseUrl + '/public/getmarketsummary?market=XLR/BTC'))
+      switchMap(() => this.http.get<MarketSummary>(this.apiBaseUrl + '/public/getmarketsummary?market=AMS/BTC'))
     );
   }
 }

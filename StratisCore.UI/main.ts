@@ -18,9 +18,9 @@ nodaemon = args.some(val => val === "--nodaemon" || val === "-nodaemon");
 
 let apiPort;
 if (testnet && !sidechain) {
-  apiPort = 62009;
+  apiPort = 63009;
 } else if (!testnet && !sidechain) {
-  apiPort = 62000;
+  apiPort = 63000;
 } else if (sidechain && testnet) {
   apiPort = 38225;
 } else if (sidechain && !testnet) {
