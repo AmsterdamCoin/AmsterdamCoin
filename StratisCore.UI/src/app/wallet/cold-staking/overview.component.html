@@ -3,10 +3,10 @@
     <div class="container-fluid">
       <div class="row mb-2 mt-2" *ngIf="coldWalletAccountExists">
         <div class="col">
-          <div class="card" style="min-height: 175px">
+          <div class="card" style="min-height: 175px;">
             <div class="card-body">
               <i class="lnr lnr-question-circle float-right" data-placement="left" ngbTooltip="Cold Balance shows your total balance of coins that you have setup to cold stake on a Hot Wallet. The Hot Wallet has no access to your coins and you can withdraw them from your Cold Balance to any address at any time."></i>
-              <h3 class="title-bottom-border">COLD BALANCE</h3>
+              <h2 class="title-bottom-border amsrood">COLD BALANCE</h2>
               <h1>
                 {{ (confirmedColdBalance | coinNotation) || (0 | coinNotation) }}
                 <span class="text-uppercase"> {{ coinUnit }}</span><span class="text-lightblue" style="font-size: 70%;"> ≈{{ spendableColdBalanceBaseValue }} BTC</span>
@@ -31,25 +31,31 @@
           </div>
         </div>
       </div>
+	  
+
+	  
+	  
       <div class="row mb-2 mt-2" *ngIf="!coldWalletAccountExists">
         <div class="col-12">
-          <div class="card mb-4">
+          <div class="card_totop mb-4">
             <div class="card-body">
-              <i class="lnr lnr-question-circle float-right" data-html="true" data-placement="left" ngbTooltip="Cold Staking allows you to safely store the coins in your wallet, while a separate always online Hot Wallet stakes the coins. The Hot Wallet has no access to your coins and you can withdraw them from your Cold Balance to any address at any time."></i>
-              <h3 class="title-bottom-border text-uppercase">Setup cold staking</h3>
-              <h4>
-                No cold staking has been setup for your account&hellip;<br />
-                <button type="button" class="btn btn-lg btn-success text-uppercase text-center mt-2" (click)="onSetup()"><span class="lnr lnr-plus-circle"></span> Setup cold staking</button>
-              </h4>
+				<div class="float-right">
+			  	<button type="button" style="padding-right:15px;" class="btn btn-success text-uppercase text-center mt-2" (click)="onSetup()"><span class="lnr lnr-plus-circle"></span> Setup cold staking</button>
+				<i class="lnr lnr-question-circle" style="padding-left:15px;" data-html="true" data-placement="left" ngbTooltip="Cold Staking allows you to safely store the coins in your wallet, while a separate always online Hot Wallet stakes the coins. The Hot Wallet has no access to your coins and you can withdraw them from your Cold Balance to any address at any time."></i>
+				</div>
+				<h2 class="text-uppercase amsrood">Setup cold staking</h2>
+             <h4>No cold staking has been setup for your account&hellip;
+			 </h4>
             </div>
           </div>
         </div>
       </div>
+	  
       <div class="row mb-2 mt-2" *ngIf="coldWalletAccountExists">
         <div class="col-12">
-          <div class="card mb-4" *ngIf="coldTransactions">
+          <div class="card_totop mb-4" *ngIf="coldTransactions">
             <div class="card-body">
-              <h3 class="title-bottom-border text-uppercase">Cold Staking History</h3>
+              <h2 class="title-bottom-border text-uppercase amsrood">Cold Staking History</h2>
               <div class="row row-header mr-1 ml-1">
                 <div class="col row-header-column">Type</div>
                 <div class="col row-header-column text-right">Amount</div>

@@ -1,18 +1,28 @@
 <section id="GUI">
   <section id="content">
     <div class="container-fluid">
-      <div class="row mb-2 mt-2">
-        <div class="col-12">
-          <div class="card">
-            <div class="card-body">
-              <div class="float-right">
+	
+		<div class="row">
+		<div class="col-12">
+	  		<div class="card">
+			<div class="card-body" style="padding-top:30px;">
+			<div class="float-right">
                 <button class="btn btn-success mr-2 mb-2 text-uppercase" style="display: inline-block" (click)="addNewAddressClicked()"><span class="lnr lnr-plus-circle"></span> Add New Address</button>
               </div>
-              <h3 class="clearfix title-bottom-border">Address book</h3>
+				<h2 class="text-uppercase amsrood">Address book</h2>
+			</div>
+			</div>
+		</div>
+	</div>	
+	
+      <div class="row mb-2 mt-2">
+        <div class="col-12">
+          <div class="card_totop">
+            <div class="card-body">
               <div class="row">
                 <ng-template #noAddresses>
-                  <div class="col-12 text-center">
-                    <p>Looks like you have no addresses in your address book yet.</p>
+                  <div class="col-12">
+                    <h4>Looks like you have no addresses in your address book yet.</h4>
                   </div>
                 </ng-template>
               </div>
@@ -31,8 +41,8 @@
                           </div>
                         </dd>
                         <dd class="col-3 mb-0 text-right">
-                          <button type="button" class="btn btn-outline-primary btn-sm ml-2" (click)="sendClicked(addressRow)">Send</button>
-                          <button type="button" class="btn btn-outline-danger btn-sm ml-2" (click)="removeClicked(addressRow)"><i class="lnr lnr-trash"></i></button>
+                          <button type="button" class="btn btn-primary btn-sm ml-2" (click)="sendClicked(addressRow)">Send</button>
+                          <button type="button" class="btn btn-danger btn-sm ml-2" (click)="removeClicked(addressRow)"><i class="lnr lnr-trash"></i></button>
                         </dd>
                       </dl>
                     </div>

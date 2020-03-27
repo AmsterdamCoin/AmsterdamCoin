@@ -1,23 +1,24 @@
-<section id="GUI">
+<section id="GUI" class="container-fluid" style="background-image: url(./assets/images/bg-bottom.jpg); background-size: cover; height: 100%;">
   <!-- CONTAINER -->
   <section id="content">
     <div class="container-fluid">
-      <div class="row mb-2 mt-2">
-        <div [class.col-6]="(hasBalance && !sidechainEnabled)" [class.col-12]="!(hasBalance && !sidechainEnabled)">
-          <div class="card" style="min-height: 175px">
-            <div class="card-body">
-              <h3 class="title-bottom-border">BALANCE</h3>
-              <h1>
+	<div class="row mt-2">
+		<div class="col-12">
+		<div class="card_totop">
+		<div [class.col-12]="(hasBalance && !sidechainEnabled)" [class.col-12]="!(hasBalance && !sidechainEnabled)">
+			<div class="card-body">
+			<h2 class="title-bottom-border amsrood">WALLET BALLANCE	             
                 {{ (confirmedBalance | coinNotation) || (0 | coinNotation) }}
-                <span class="text-uppercase"> {{ coinUnit }}</span><span class="text-lightblue" style="font-size: 70%;"> ≈{{ spendableBalanceBaseValue }} BTC</span>
-              </h1>
-
-              <ul class="list-unstyled text-lightblue">
+                <span class="text-uppercase"> {{ coinUnit }}</span><span class="text-lightblue" style="font-size: 70%;"> ≈{{ spendableBalanceBaseValue }} BTC </span>
+              </h2>
+			  <h3>
+			  <ul class="list-unstyled amsgrijs">
                 <!-- <li><strong>{{ (awaitingMaturity | coinNotation) || (0 | coinNotation) }}</strong><em> (staking)</em></li> -->
                 <li><strong class="text-uppercase">{{ (unconfirmedBalance | coinNotation) || (0 | coinNotation) }} {{ coinUnit }}</strong><em> (unconfirmed)</em></li>
                 <!-- <li><strong>805.65900153</strong> <em>(staking)</em></li> -->
               </ul>
-              <div class="float-right">
+			  </h3>			  
+			  <div class="float-right" style="padding-bottom:10px;">
                 <a class="btn btn-primary" (click)="openReceiveDialog()">
                   <i class="icon lnr lnr-arrow-down-circle mr-2"></i>
                   <span class="text-center text-uppercase">
@@ -29,14 +30,19 @@
                   <span class="text-center text-uppercase">Send</span>
                 </a>
               </div>
+			  
+			</div>
+			</div>
+		</div>
+		</div>
+	</div>
 
-            </div>
-          </div>
-        </div>
-        <div class="col-6 pl-0" *ngIf="hasBalance && !sidechainEnabled">
-          <div class="card" style="min-height: 175px" *ngIf="!stakingEnabled">
+	
+      <div class="row mb-2 pl-2">
+        <div class="col-12 pl-0" *ngIf="hasBalance && !sidechainEnabled">
+          <div class="card" *ngIf="!stakingEnabled">
             <div class="card-body">
-              <h3 class="title-bottom-border text-uppercase">Staking</h3>
+              <h2 class="title-bottom-border text-uppercase">Staking</h2>
               <form [formGroup]="stakingForm">
 
                 <label class="text-uppercase" for="inputPassword">Password</label>
@@ -99,59 +105,100 @@
           </div>
         </div>
       </div>
-      <div class="row mb-2 mt-2">
-        <div class="col-12">
-          <div class="card">
-            <div class="card-body">
-              <h3 class="title-bottom-border text-uppercase">Txbit XLR/BTC Statistics</h3>
-              <div class="row pl-2">
-                <div class="col">
-                  <h3 class="text-uppercase">
+	  
+
+	  	<div class="row mb-2 mt-2">
+		<div class="col-2">
+		<div class="card_totop">
+			<div class="card-body" style="height:112px;">
+		<h2 class="h2_different" style="padding-top:5px;">Txbit AMS/BTC Statistics</h2>
+			</div>
+			</div>
+		</div>
+		<div class="col-2">
+		<div class="card_totop">
+			<div class="card-body txbit_center" style="height:112px;">
+				<img src="./assets/images/icon_price.png" height="39" width="70" style="padding-bottom:10px;">
+				    <h3 class="text-uppercase">
                     PRICE
-                  </h3>
+                   </h3>
+				   <h3>
                   <span class="{{ priceClass }}"><span class="lnr {{ priceIcon }}"></span> {{ lastPrice }} BTC</span>
-                </div>
-                <div class="col">
+				 </h3>
+			</div>
+		</div>
+		</div>
+				<div class="col-2">
+		<div class="card_totop">
+			<div class="card-body txbit_center" style="height:112px;">
+					<img src="./assets/images/icon_change.png" height="39" width="70" style="padding-bottom:10px;">
                   <h3 class="text-uppercase">
                     24H CHANGE
-                  </h3>
+                   </h3>
+				  <h3>
                   <span class="{{ priceClass }}">{{ priceChange }} %</span>
-                </div>
-                <div class="col">
+				  </h3>
+			</div>
+		</div>
+		</div>
+				<div class="col-2">
+		<div class="card_totop">
+			<div class="card-body txbit_center" style="height:112px;">
+									<img src="./assets/images/icon_high.png" height="39" width="70" style="padding-bottom:10px;">
                   <h3 class="text-uppercase">
                     High
                   </h3>
+				  <h3>
                   <span>{{ highPrice }} BTC</span>
-                </div>
-                <div class="col">
+				  </h3>
+			</div>
+		</div>
+		</div>
+				<div class="col-2">
+		<div class="card_totop">
+			<div class="card-body txbit_center" style="height:112px;">
+									<img src="./assets/images/icon_low.png" height="39" width="70" style="padding-bottom:10px;">
                   <h3 class="text-uppercase">
                     Low
-                  </h3>
+                   </h3>
+				  <h3>
                   <span>{{ lowPrice }} BTC</span>
-                </div>
-                <div class="col">
+				  </h3>
+			</div>
+		</div>
+		</div>
+				<div class="col-2">
+		<div class="card_totop">
+			<div class="card-body txbit_center" style="height:112px;">
+								<img src="./assets/images/icon_volume.png" height="39" width="70" style="padding-bottom:10px;">
                   <h3 class="text-uppercase">
                     24H Volume
                   </h3>
+				  <h3>
                   <span>{{ baseVolume }} BTC</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="row" *ngIf="transactionArray">
+				  </h3>
+			</div>
+		</div>
+		</div>
+	</div>
+	  
+	  
+	  
+	  
+	  
+    <div class="row" *ngIf="transactionArray">
         <div class="col-12">
           <div class="card h-100">
             <div class="card-body">
-              <h3 class="title-bottom-border text-uppercase">Latest Transactions</h3>
-
-              <div class="row row-header mr-1 ml-1">
+              <h2 class="title-bottom-border text-uppercase">Latest Transactions</h2>
+              <div class="row row-header">
                 <div class="col row-header-column">Type</div>
                 <div class="col row-header-column text-right">Amount</div>
                 <div class="col row-header-column text-center">Date</div>
                 <div class="col row-header-column text-right">Details</div>
               </div>
+			</div>
+			<div class="card-body">
               <div class="row mr-1 ml-1">
                 <div class="col-12" *ngFor="let transaction of (transactionArray ? transactionArray.slice(0,5): []); let i=index">
                   <div class="row rows">
@@ -182,7 +229,7 @@
                         {{ transaction.transactionTimestamp * 1000 | date:'medium' }}
                       </span>
                     </div>
-                    <div class="col text-white row-column text-right">
+                    <div class="col amsgrijs row-column text-right">
                       <span>
                         <a class="link" (click)="openTransactionDetailDialog(transaction)">
                           <i class="icon lnr lnr-arrow-right-circle"></i>
@@ -200,15 +247,15 @@
             </div>
           </div>
         </div>
-      </div>
+    </div>
       <div class="row" *ngIf="!transactionArray">
         <div class="col-12">
           <div class="card">
             <div class="card-body">
-              <h3 class="title-bottom-border text-uppercase">Latest Transactions</h3>
+              <h2 class="red_line h2_different text-uppercase" style="padding-bottom:15px;">Latest Transactions</h2>
               <div class="row">
                 <div class="col-12 ml-2">
-                  <h4>Looks like you haven't made any transactions yet.</h4>
+                  <i><h5>Looks like you haven't made any transactions yet.</h5></i>
                 </div>
               </div>
             </div>
@@ -226,3 +273,5 @@
   <!-- /CONTAINER-->
 </section>
 <!-- /GUI-->
+
+

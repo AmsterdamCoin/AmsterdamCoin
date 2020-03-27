@@ -1,18 +1,17 @@
 
-<section id="GUI" class="container-fluid" style="background-image: url(./assets/images/solaris-intro.gif); background-size: cover;">
+<section id="GUI" class="container-fluid" style="background-image: url(./assets/images/bg_top_sub.jpg); background-size: cover; height: 100%;">
 
   <div class="row justify-content-center">
     <div class="col-12 bg-dark pt-2 pb-2 border-bottom">
-      <img src="./assets/images/solaris-login-logo.png" height="40" width="228" class="float-left"/>
-
-      <h4 class="float-right mt-2">Security. Privacy. Liberty.</h4>
+      <img src="./assets/images/logo_ams_small.png" height="40" width="47" class="float-left"/>
+      <h4 class="float-right mt-2">Amsterdam Coin/AMS</h4>
     </div>
   </div>
   <div class="row justify-content-center">
-    <div class="col-4 right-login" style="padding-top: 60px;">
-      <div class="card mt-4" style="opacity: 0.97; filter: alpha(opacity=97);">
+    <div class="col-4 right-login" style="padding-top: 40px;">
+      <div class="card_inlog mt-4" style="opacity: 0.92; filter: alpha(opacity=92);">
         <div class="card-body">
-          <h3 class="title-bottom-border">Login</h3>
+          <h2 class="title-bottom-border">Login</h2>
           <form *ngIf="hasWallet" class="form-group" [formGroup]="openWalletForm">
             <label class="text-uppercase" for="selectWallet">Wallet</label>
             <select class="form-control" formControlName="selectWallet">
@@ -27,7 +26,7 @@
           </form>
 
           <div *ngIf="hasWallet">
-            <button type="submit" class="btn btn-block btn-lg btn-primary" [disabled]="!openWalletForm.valid || isDecrypting" (click)="onDecryptClicked()">LOGIN</button>
+            <button type="submit" class="btn btn-block btn-lg btn-login" [disabled]="!openWalletForm.valid || isDecrypting" (click)="onDecryptClicked()">LOGIN</button>
           </div>
           <div class="row d-flex justify-content-center mt-3">
             <button [disabled]="isDecrypting" type="button" class="btn btn-block btn-link text-white" (click)="onCreateClicked()">Create or restore a wallet</button>
@@ -36,7 +35,7 @@
       </div>
       <!-- SVG -->
       <div [ngClass]="{'invisible': !isDecrypting}" class="text-center">
-        <img src="./assets/images/loading.svg"/>
+        <div class="loader">Loading...</div>
       </div>
       <!-- /SVG -->
     </div>

@@ -3,10 +3,9 @@
     <div class="container-fluid">
       <div class="row mb-2 mt-2" *ngIf="transactions">
         <div class="col-12">
-          <div class="card">
+          <div class="card_totop">
             <div class="card-body">
-              <h3 class="title-bottom-border text-uppercase">Transaction History</h3>
-
+              <h2 class="title-bottom-border text-uppercase amsrood">Transaction History</h2>
               <div class="row row-header mr-1 ml-1">
                 <div class="col row-header-column">Type</div>
                 <div class="col row-header-column text-right">Amount</div>
@@ -43,7 +42,7 @@
                         {{ transaction.transactionTimestamp * 1000 | date:'medium' }}
                       </span>
                     </div>
-                    <div class="col text-white row-column text-right">
+                    <div class="col amsgrijs row-column text-right">
                       <span>
                         <a class="link" (click)="openTransactionDetailDialog(transaction)">
                           <i class="icon lnr lnr-arrow-right-circle"></i>
@@ -58,20 +57,29 @@
           </div>
         </div>
       </div>
-      <div class="row mb-2 mt-2" *ngIf="!transactions">
+	
+
+	  
+      <div class="row mb-2 mt-1" *ngIf="!transactions">
         <div class="col-12">
           <div class="card">
-            <div class="card-body">
-              <h3 class="title-bottom-border text-uppercase">Transaction History</h3>
+	  		<div class="card_totop">
+            <div class="card-body">	
               <div class="row">
-                <div class="col-12 ml-2">
-                  <h4>Looks like you haven't made any transactions yet.</h4>
+                <div class="col-12">
+				<h2 class="text-uppercase amsrood">Transaction History</h2>
+                </div>
+              </div>			
+              <div class="row">
+                <div class="col-12">
+                  <i><h4>Looks like you haven't made any transactions yet.</h4></i>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>
+	  </div>
     </div>
   </section>
 </section>

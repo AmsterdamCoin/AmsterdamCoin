@@ -4,7 +4,7 @@
     <div class="container-fluid">
     <div class="row mb-2 mt-2">
       <div class="col-12">
-        <div class="card mb-4">
+        <div class="card_totop mb-4">
           <div class="card-body">
             <section class="col-12">
               <ngb-tabset type="tabs" class="nav-fill">
@@ -33,7 +33,7 @@
                         <div *ngIf="signatureFormErrors.password" class="invalid-feedback">{{ signatureFormErrors.password }}</div>
                       </div>
                       <div class="form-group">
-                        <button type="button" class="btn btn-block btn-lg btn-primary text-uppercase" (click)="onSignButtonClick($event.target)" [disabled]="!signatureForm.valid">Sign</button>
+                        <button type="button" class="btn btn-block btn-lg btn-success text-uppercase" (click)="onSignButtonClick($event.target)" [disabled]="!signatureForm.valid">Sign</button>
                       </div>
                     </form>
                   </ng-template>
@@ -57,7 +57,7 @@
                         <div *ngIf="verifyFormErrors.signature" class="invalid-feedback">{{ verifyFormErrors.signature }}</div>
                       </div>
                       <div class="form-group">
-                        <button type="button" class="btn btn-block btn-lg btn-primary text-uppercase" (click)="onVerifyButtonClick($event.target)" [disabled]="!verifyForm.valid">Verify</button>
+                        <button type="button" class="btn btn-block btn-lg btn-success text-uppercase" (click)="onVerifyButtonClick($event.target)" [disabled]="!verifyForm.valid">Verify</button>
                       </div>
                     </form>
                   </ng-template>

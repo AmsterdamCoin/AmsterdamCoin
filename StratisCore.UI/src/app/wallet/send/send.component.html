@@ -48,7 +48,7 @@
             </form>
             <div class="modal-footer p-0">
               <button *ngIf="!isSending" type="button" [disabled]="isSending" class="btn btn-danger text-uppercase" (click)="activeModal.close('Close click')">Cancel</button>
-              <button *ngIf="!isSending" type="button" class="btn btn-primary btn-block text-uppercase" [disabled]="!sendForm.valid || isSending || !estimatedFee" (click)="send()">Send</button>
+              <button *ngIf="!isSending" type="button" class="btn btn-success btn-block text-uppercase" [disabled]="!sendForm.valid || isSending || !estimatedFee" (click)="send()">Send</button>
               <!-- SVG -->
               <div *ngIf="isSending" class="Loading LoadingSend col-2 mx-auto">
                 <img src="./assets/images/loading.svg" width="30" height="30"/>
@@ -95,7 +95,7 @@
             </form>
             <div class="modal-footer p-0">
               <button *ngIf="!isSending" type="button" [disabled]="isSending" class="btn btn-danger text-uppercase" (click)="activeModal.close('Close click')">Cancel</button>
-              <button *ngIf="!isSending" type="button" class="btn btn-primary btn-block text-uppercase" [disabled]="!sendToSidechainForm.valid || isSending || !estimatedSidechainFee" (click)="sendToSidechain()">Send</button>
+              <button *ngIf="!isSending" type="button" class="btn btn-success btn-block text-uppercase" [disabled]="!sendToSidechainForm.valid || isSending || !estimatedSidechainFee" (click)="sendToSidechain()">Send</button>
               <!-- SVG -->
               <div *ngIf="isSending" class="Loading LoadingSend col-2 mx-auto">
                 <img src="./assets/images/loading.svg" width="30" height="30" />
