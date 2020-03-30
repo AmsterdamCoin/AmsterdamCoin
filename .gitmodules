@@ -2,6 +2,6 @@
 	path = FederatedSidechains
 	url = https://github.com/SolarisPlatform/FederatedSidechains
 	
-[submodule "SolarisBitcoinFullNode"]
-	path = SolarisBitcoinFullNode
-	url = https://github.com/SolarisPlatform/SolarisBitcoinFullNode
+[submodule "AmsterdamCoinBitcoinFullNode"]
+	path = AmsterdamCoinBitcoinFullNode
+	url = https://github.com/AmsterdamCoin/AmsterdamCoinBitcoinFullNode
