@@ -1,17 +1,17 @@
 | Windows | Mac OS | Linux
 | :---- | :------ | :---- |
-| [![Build Status](https://dev.azure.com/SolarisPlatform/SolarisCore/_apis/build/status/Hosted%20Windows%20Container)](https://dev.azure.com/SolarisPlatform/SolarisCore/_build/latest?definitionId=16) | [![Build Status](https://dev.azure.com/SolarisPlatform/SolarisCore/_apis/build/status/Hosted%20macOS)](https://dev.azure.com/SolarisPlatform/SolarisCore/_build/latest?definitionId=18) | [![Build Status](https://dev.azure.com/SolarisPlatform/SolarisCore/_apis/build/status/Hosted%20Ubuntu%201604)](https://dev.azure.com/SolarisPlatform/SolarisCore/_build/latest?definitionId=17)
+| [![Build Status](https://dev.azure.com/AmsterdamCoin/AmsterdamCoin/_apis/build/status/Hosted%20Windows%20Container)](https://dev.azure.com/AmsterdamCoin/AmsterdamCoin/_build/latest?definitionId=16) | [![Build Status](https://dev.azure.com/AmsterdamCoin/AmsterdamCoin/_apis/build/status/Hosted%20macOS)](https://dev.azure.com/AmsterdamCoin/AmsterdamCoin/_build/latest?definitionId=18) | [![Build Status](https://dev.azure.com/AmsterdamCoin/AmsterdamCoin/_apis/build/status/Hosted%20Ubuntu%201604)](https://dev.azure.com/AmsterdamCoin/AmsterdamCoin/_build/latest?definitionId=17)
 
-# Solaris Core
+# AmsterdamCoin
 
-This is the repository of the Solaris Core Wallet, a full node staking wallet using Electron and Angular at the front-end and .NET Core with C# in the back-end.
+This is the repository of the AmsterdamCoin Wallet, a full node staking wallet using Electron and Angular at the front-end and .NET Core with C# in the back-end.
 
-# Building and running the Solaris Core daemon
+# Building and running the AmsterdamCoin daemon
 
-The Solaris Core daemon is the backend REST service, hosting a Solaris node upon which Solaris Core depends.  
-The Solaris Core daemon is hosted in another repository. All information on building and running the daemon can be found [here](https://github.com/SolarisPlatform/SolarisBitcoinFullNode/blob/master/Documentation/getting-started.md).
+The AmsterdamCoin daemon is the backend REST service, hosting a AmsterdamCoin node upon which AmsterdamCoin depends.  
+The AmsterdamCoin daemon is hosted in another repository. All information on building and running the daemon can be found [here](https://github.com/AmsterdamCoinPlatform/AmsterdamCoinBitcoinFullNode/blob/master/Documentation/getting-started.md).
 
-# Building and running the Solaris Core user interface
+# Building and running the AmsterdamCoin user interface
 
 ## Install NodeJS
 
@@ -22,12 +22,12 @@ Download and install the latest Long Term Support (LTS) version of NodeJS at: ht
 Clone this repository locally:
 
 ``` bash
-git clone https://www.github.com/SolarisPlatform/SolarisCore
+git clone https://www.github.com/AmsterdamCoin/AmsterdamCoin
 ```
 
 Navigate to the StratisCore.UI folder in a terminal:
 ``` bash
-cd ./SolarisCore/StratisCore.UI
+cd ./AmsterdamCoinCore/StratisCore.UI
 ```
 
 ## Install dependencies with npm:
@@ -41,7 +41,7 @@ npm install
 ## Run the UI in development mode
 
 #### Terminal Window 1
-[Run the daemon](https://github.com/SolarisPlatform/SolarisBitcoinFullNode/blob/master/Documentation/getting-started.md)  
+[Run the daemon](https://github.com/AmsterdamCoin/AmsterdamCoin/blob/master/Documentation/getting-started.md)  
 
 #### Terminal Window 2
 Use `npm run mainnet` to start the UI in mainnet mode or `npm run testnet` to start the UI in testnet mode.  
@@ -66,5 +66,5 @@ Every time someone pushes to the master branch or create a pull request on it, a
 
 If you want the :sparkles: latest :sparkles: (unstable :bomb:) version of the Breeze app, you can get it here: 
 
-https://github.com/SolarisPlatform/SolarisCore/releases/tag/Continuous-Delivery
+https://github.com/AmsterdamCoin/AmsterdamCoin/releases/tag/Continuous-Delivery
 
