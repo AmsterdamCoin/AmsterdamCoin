@@ -27,7 +27,7 @@ git clone https://www.github.com/AmsterdamCoin/AmsterdamCoin
 
 Navigate to the StratisCore.UI folder in a terminal:
 ``` bash
-cd ./AmsterdamCoinCore/StratisCore.UI
+cd ./AmsterdamCoin/StratisCore.UI
 ```
 
 ## Install dependencies with npm:
