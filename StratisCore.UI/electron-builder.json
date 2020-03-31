@@ -1,6 +1,6 @@
 {
-  "appId": "com.solarisplatform.core",
-  "productName": "Solaris Core",
+  "appId": "com.amsterdamcoin.core",
+  "productName": "AmsterdamCoin",
   "publish": null,
   "directories": {
     "output": "app-builds"
@@ -35,7 +35,7 @@
       "deb",
       "tar.gz"
     ],
-    "synopsis": "StratisCore.UI: Solaris' staking wallet.",
+    "synopsis": "StratisCore.UI: AmsterdamCoin' staking wallet.",
     "category": "Utility",
     "artifactName": "${productName}-v${version}-${os}-${arch}.${ext}"
   },
@@ -52,7 +52,7 @@
     "perMachine": true,
     "allowToChangeInstallationDirectory": true,
     "deleteAppDataOnUninstall": true,
-    "guid": "84d5b240-9fee-4f49-ae5f-15f663189175",
+    "guid": "fdae07be-00a9-4b56-9697-94e8aa135b49",
     "createDesktopShortcut": true,
     "createStartMenuShortcut": true,
     "license": "src/assets/images/license_en.txt"

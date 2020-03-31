@@ -1,18 +1,18 @@
 {
-  "name": "solaris-core",
-  "description": "Solaris Core Wallet",
-  "version": "3.0.0",
+  "name": "amsterdamcoin",
+  "description": "AmsterdamCoin Wallet",
+  "version": "5.0.0",
   "author": {
-    "name": "Solaris Platform",
-    "email": "support@solarisplatform.com"
+    "name": "AmsterdamCoin",
+    "email": "support@amsterdamcoin.com"
   },
   "license": "MIT",
-  "homepage": "https://github.com/SolarisPlatform/SolarisCore",
+  "homepage": "https://github.com/AmsterdamCoin/AmsterdamCoin",
   "keywords": [
     "fullnode",
     "ui",
-    "solaris",
-	"solarisplatform",
+    "amsterdam",
+    "amsterdamcoin",
     "core",
     "bitcoin",
     "angular",

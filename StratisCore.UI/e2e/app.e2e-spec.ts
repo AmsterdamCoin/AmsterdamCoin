@@ -8,8 +8,8 @@ describe('stratis-core App', () => {
     page = new AngularElectronPage();
   });
 
-  it('Page title should be Solaris Core', () => {
+  it('Page title should be AmsterdamCoin', () => {
     page.navigateTo('/');
-    expect(page.getTitle()).toEqual('Solaris Core');
+    expect(page.getTitle()).toEqual('AmsterdamCoin');
   });
 });

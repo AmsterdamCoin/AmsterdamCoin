@@ -75,13 +75,13 @@ export class AppComponent implements OnInit, OnDestroy {
   }
 
   private setTitle() {
-    let applicationName = "Solaris Core";
+    let applicationName = "AmsterdamCoin";
     let applicationVersion = this.globalService.getApplicationVersion();
     let newTitle = applicationName + " " + applicationVersion;
     this.titleService.setTitle(newTitle);
   }
 
   public openSupport() {
-    this.electronService.shell.openExternal("https://github.com/SolarisPlatform");
+    this.electronService.shell.openExternal("https://github.com/AmsterdamCoin");
   }
 }

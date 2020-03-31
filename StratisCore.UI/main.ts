@@ -55,7 +55,7 @@ function createWindow() {
     frame: true,
     minWidth: 1150,
     minHeight: 650,
-    title: "Solaris Core",
+    title: "AmsterdamCoin",
     webPreferences: {
       webSecurity: false
     },
@@ -107,7 +107,7 @@ app.on('ready', () => {
     if (sidechain && !nodaemon) {
       startDaemon("Stratis.SidechainD");
     } else if (!nodaemon) {
-      startDaemon("Stratis.SolarisD")
+      startDaemon("Stratis.AmsterdamCoinD")
     }
   }
   createTray();
@@ -185,7 +185,7 @@ function startDaemon(daemonName) {
   });
 
   daemonProcess.stdout.on('data', (data) => {
-    writeLog(`Solaris: ${data}`);
+    writeLog(`AmsterdamCoin: ${data}`);
   });
 }
 
@@ -213,7 +213,7 @@ function createTray() {
       }
     }
   ]);
-  systemTray.setToolTip('Solaris Core');
+  systemTray.setToolTip('AmsterdamCoin');
   systemTray.setContextMenu(contextMenu);
   systemTray.on('click', function() {
     if (!mainWindow.isVisible()) {

@@ -88,7 +88,7 @@ export class SplitComponent implements OnInit, OnDestroy {
     'amount': {
       'required': 'An amount is required.',
       'pattern': 'Enter a valid transaction amount. Only positive numbers and no more than 8 decimals are allowed.',
-      'min': "The amount has to be more or equal to 0.00001 Solaris.",
+      'min': "The amount has to be more or equal to 0.00001 AMS.",
       'max': 'The total transaction amount exceeds your spendable balance.'
     },
     'password': {
