@@ -2,42 +2,43 @@
   <!-- CONTAINER -->
   <section id="content">
     <div class="container-fluid">
-	<div class="row mt-2">
-		<div class="col-12">
-		<div class="card_totop">
-		<div [class.col-12]="(hasBalance && !sidechainEnabled)" [class.col-12]="!(hasBalance && !sidechainEnabled)">
-			<div class="card-body">
-			<h2 class="title-bottom-border amsrood">WALLET BALLANCE	             
-                {{ (confirmedBalance | coinNotation) || (0 | coinNotation) }}
-                <span class="text-uppercase"> {{ coinUnit }}</span><span class="text-lightblue" style="font-size: 70%;"> ≈{{ spendableBalanceBaseValue }} BTC </span>
-              </h2>
-			  <h3>
-			  <ul class="list-unstyled amsgrijs">
-                <!-- <li><strong>{{ (awaitingMaturity | coinNotation) || (0 | coinNotation) }}</strong><em> (staking)</em></li> -->
-                <li><strong class="text-uppercase">{{ (unconfirmedBalance | coinNotation) || (0 | coinNotation) }} {{ coinUnit }}</strong><em> (unconfirmed)</em></li>
-                <!-- <li><strong>805.65900153</strong> <em>(staking)</em></li> -->
-              </ul>
-			  </h3>			  
-			  <div class="float-right" style="padding-bottom:10px;">
-                <a class="btn btn-primary" (click)="openReceiveDialog()">
-                  <i class="icon lnr lnr-arrow-down-circle mr-2"></i>
-                  <span class="text-center text-uppercase">
-                    Receive
-                  </span>
-                </a>
-                <a class="btn btn-success ml-2" (click)="openSendDialog()">
-                  <i class="icon lnr lnr-arrow-up-circle mr-2"></i>
-                  <span class="text-center text-uppercase">Send</span>
-                </a>
-              </div>
-			  
-			</div>
-			</div>
-		</div>
-		</div>
-	</div>
+      <div class="row mt-2">
+        <div class="col-12">
+          <div class="card_totop">
+            <div [class.col-12]="(hasBalance && !sidechainEnabled)" [class.col-12]="!(hasBalance && !sidechainEnabled)">
+              <div class="card-body">
+                <h2 class="title-bottom-border amsrood">
+                  WALLET BALLANCE
+                  {{ (confirmedBalance | coinNotation) || (0 | coinNotation) }}
+                  <span class="text-uppercase"> {{ coinUnit }}</span><span class="text-lightblue" style="font-size: 70%;"> ≈{{ spendableBalanceBaseValue }} BTC </span>
+                </h2>
+                <h3>
+                  <ul class="list-unstyled amsgrijs">
+                    <!-- <li><strong>{{ (awaitingMaturity | coinNotation) || (0 | coinNotation) }}</strong><em> (staking)</em></li> -->
+                    <li><strong class="text-uppercase">{{ (unconfirmedBalance | coinNotation) || (0 | coinNotation) }} {{ coinUnit }}</strong><em> (unconfirmed)</em></li>
+                    <!-- <li><strong>805.65900153</strong> <em>(staking)</em></li> -->
+                  </ul>
+                </h3>
+                <div class="float-right" style="padding-bottom:10px;">
+                  <a class="btn btn-primary" (click)="openReceiveDialog()">
+                    <i class="icon lnr lnr-arrow-down-circle mr-2"></i>
+                    <span class="text-center text-uppercase">
+                      Receive
+                    </span>
+                  </a>
+                  <a class="btn btn-success ml-2" (click)="openSendDialog()">
+                    <i class="icon lnr lnr-arrow-up-circle mr-2"></i>
+                    <span class="text-center text-uppercase">Send</span>
+                  </a>
+                </div>
 
-	
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
       <div class="row mb-2 pl-2">
         <div class="col-12 pl-0" *ngIf="hasBalance && !sidechainEnabled">
           <div class="card" *ngIf="!stakingEnabled">
@@ -105,88 +106,88 @@
           </div>
         </div>
       </div>
-	  
 
-	  	<div class="row mb-2 mt-2">
-		<div class="col-2">
-		<div class="card_totop">
-			<div class="card-body" style="height:112px;">
-		<h2 class="h2_different" style="padding-top:5px;">Txbit AMS/BTC Statistics</h2>
-			</div>
-			</div>
-		</div>
-		<div class="col-2">
-		<div class="card_totop">
-			<div class="card-body txbit_center" style="height:112px;">
-				<img src="./assets/images/icon_price.png" height="39" width="70" style="padding-bottom:10px;">
-				    <h3 class="text-uppercase">
-                    PRICE
-                   </h3>
-				   <h3>
-                  <span class="{{ priceClass }}"><span class="lnr {{ priceIcon }}"></span> {{ lastPrice }} BTC</span>
-				 </h3>
-			</div>
-		</div>
-		</div>
-				<div class="col-2">
-		<div class="card_totop">
-			<div class="card-body txbit_center" style="height:112px;">
-					<img src="./assets/images/icon_change.png" height="39" width="70" style="padding-bottom:10px;">
-                  <h3 class="text-uppercase">
-                    24H CHANGE
-                   </h3>
-				  <h3>
-                  <span class="{{ priceClass }}">{{ priceChange }} %</span>
-				  </h3>
-			</div>
-		</div>
-		</div>
-				<div class="col-2">
-		<div class="card_totop">
-			<div class="card-body txbit_center" style="height:112px;">
-									<img src="./assets/images/icon_high.png" height="39" width="70" style="padding-bottom:10px;">
-                  <h3 class="text-uppercase">
-                    High
-                  </h3>
-				  <h3>
-                  <span>{{ highPrice }} BTC</span>
-				  </h3>
-			</div>
-		</div>
-		</div>
-				<div class="col-2">
-		<div class="card_totop">
-			<div class="card-body txbit_center" style="height:112px;">
-									<img src="./assets/images/icon_low.png" height="39" width="70" style="padding-bottom:10px;">
-                  <h3 class="text-uppercase">
-                    Low
-                   </h3>
-				  <h3>
-                  <span>{{ lowPrice }} BTC</span>
-				  </h3>
-			</div>
-		</div>
-		</div>
-				<div class="col-2">
-		<div class="card_totop">
-			<div class="card-body txbit_center" style="height:112px;">
-								<img src="./assets/images/icon_volume.png" height="39" width="70" style="padding-bottom:10px;">
-                  <h3 class="text-uppercase">
-                    24H Volume
-                  </h3>
-				  <h3>
-                  <span>{{ baseVolume }} BTC</span>
-				  </h3>
-			</div>
-		</div>
-		</div>
-	</div>
-	  
-	  
-	  
-	  
-	  
-    <div class="row" *ngIf="transactionArray">
+
+      <div class="row mb-2 mt-2">
+        <div class="col-2">
+          <div class="card_totop">
+            <div class="card-body" style="height:112px;">
+              <h2 class="h2_different" style="padding-top:5px;">Txbit AMS/BTC Statistics</h2>
+            </div>
+          </div>
+        </div>
+        <div class="col-2">
+          <div class="card_totop">
+            <div class="card-body txbit_center" style="height:112px;">
+              <img src="./assets/images/icon_price.png" height="39" width="70" style="padding-bottom:10px;">
+              <h3 class="text-uppercase">
+                PRICE
+              </h3>
+              <h3>
+                <span class="{{ priceClass }}"><span class="lnr {{ priceIcon }}"></span> {{ lastPrice | coinNotation }} BTC</span>
+              </h3>
+            </div>
+          </div>
+        </div>
+        <div class="col-2">
+          <div class="card_totop">
+            <div class="card-body txbit_center" style="height:112px;">
+              <img src="./assets/images/icon_change.png" height="39" width="70" style="padding-bottom:10px;">
+              <h3 class="text-uppercase">
+                24H CHANGE
+              </h3>
+              <h3>
+                <span class="{{ priceClass }}">{{ priceChange }} %</span>
+              </h3>
+            </div>
+          </div>
+        </div>
+        <div class="col-2">
+          <div class="card_totop">
+            <div class="card-body txbit_center" style="height:112px;">
+              <img src="./assets/images/icon_high.png" height="39" width="70" style="padding-bottom:10px;">
+              <h3 class="text-uppercase">
+                High
+              </h3>
+              <h3>
+                <span>{{ highPrice | coinNotation }} BTC</span>
+              </h3>
+            </div>
+          </div>
+        </div>
+        <div class="col-2">
+          <div class="card_totop">
+            <div class="card-body txbit_center" style="height:112px;">
+              <img src="./assets/images/icon_low.png" height="39" width="70" style="padding-bottom:10px;">
+              <h3 class="text-uppercase">
+                Low
+              </h3>
+              <h3>
+                <span>{{ lowPrice | coinNotation }} BTC</span>
+              </h3>
+            </div>
+          </div>
+        </div>
+        <div class="col-2">
+          <div class="card_totop">
+            <div class="card-body txbit_center" style="height:112px;">
+              <img src="./assets/images/icon_volume.png" height="39" width="70" style="padding-bottom:10px;">
+              <h3 class="text-uppercase">
+                24H Volume
+              </h3>
+              <h3>
+                <span>{{ baseVolume | coinNotation }} BTC</span>
+              </h3>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+
+
+      <div class="row" *ngIf="transactionArray">
         <div class="col-12">
           <div class="card h-100">
             <div class="card-body">
@@ -197,8 +198,8 @@
                 <div class="col row-header-column text-center">Date</div>
                 <div class="col row-header-column text-right">Details</div>
               </div>
-			</div>
-			<div class="card-body">
+            </div>
+            <div class="card-body">
               <div class="row mr-1 ml-1">
                 <div class="col-12" *ngFor="let transaction of (transactionArray ? transactionArray.slice(0,5): []); let i=index">
                   <div class="row rows">
@@ -247,7 +248,7 @@
             </div>
           </div>
         </div>
-    </div>
+      </div>
       <div class="row" *ngIf="!transactionArray">
         <div class="col-12">
           <div class="card">
@@ -273,5 +274,3 @@
   <!-- /CONTAINER-->
 </section>
 <!-- /GUI-->
-
-

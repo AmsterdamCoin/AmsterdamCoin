@@ -105,8 +105,8 @@ export class DashboardComponent implements OnInit, OnDestroy {
     this.marketSummarySubscription = this.txbitService.getMarketSummary()
       .subscribe(
         response => {
-          this.lastPrice = response.result.Last;
-          this.previousDayPrice = response.result.PrevDay;
+          this.lastPrice = response.result.Last * parseFloat("100000000");
+          this.previousDayPrice = response.result.PrevDay * parseFloat("100000000");
           if (this.lastPrice < this.previousDayPrice) {
             this.priceClass = "text-danger";
             this.priceIcon = "lnr-arrow-down";
@@ -118,12 +118,12 @@ export class DashboardComponent implements OnInit, OnDestroy {
             this.priceIcon = "lnr-arrow-right";
           }
 
-          this.priceChange = parseFloat((((this.lastPrice - this.previousDayPrice) / this.previousDayPrice) * parseFloat("100")).toFixed(2));
-          this.highPrice = response.result.High;
-          this.lowPrice = response.result.Low;
-          this.baseVolume = response.result.BaseVolume;
+          this.priceChange = parseFloat(((((this.lastPrice - this.previousDayPrice) / this.previousDayPrice) * parseFloat("100")) * parseFloat("100000000")).toFixed(2));
+          this.highPrice = response.result.High * parseFloat("100000000");
+          this.lowPrice = response.result.Low * parseFloat("100000000");
+          this.baseVolume = response.result.BaseVolume * parseFloat("100000000");;
 
-          this.spendableBalanceBaseValue = parseFloat(((this.lastPrice * this.spendableBalance) / parseFloat("100000000")).toFixed(2));
+          this.spendableBalanceBaseValue = parseFloat((((this.lastPrice * this.spendableBalance) / parseFloat("100000000")) / parseFloat("100000000")).toFixed(2));
         });
   }
 
