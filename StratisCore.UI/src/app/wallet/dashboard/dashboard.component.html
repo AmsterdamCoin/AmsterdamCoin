@@ -8,7 +8,7 @@
             <div [class.col-12]="(hasBalance && !sidechainEnabled)" [class.col-12]="!(hasBalance && !sidechainEnabled)">
               <div class="card-body">
                 <h2 class="title-bottom-border amsrood">
-                  WALLET BALLANCE
+                  WALLET BALANCE
                   {{ (confirmedBalance | coinNotation) || (0 | coinNotation) }}
                   <span class="text-uppercase"> {{ coinUnit }}</span><span class="text-lightblue" style="font-size: 70%;"> ≈{{ spendableBalanceBaseValue }} BTC </span>
                 </h2>
